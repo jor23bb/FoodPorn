@@ -11,7 +11,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
+	//console.log("Javascript connected!");
 
 	$(".friend a").click(nameClick);
 }

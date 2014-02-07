@@ -1,34 +1,34 @@
 {
-	"friends": [
+	"trendingFoods": [
 		{
-			"name": "Doug Engelbart",
-			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+			"name": "Avocado Dish",
+			"description": "Something yummy.. with avocado",
+			"imageURL": "http://nutritiontranslator.files.wordpress.com/2011/07/img_0564.jpg"			
 		},
 		{
-			"name": "Ivan Sutherland",
-			"description": "Great at sketching",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
+			"name": "Fruit Bowl",
+			"description": "Yo I hear you like fruit so heres some fruit in your fruit",
+			"imageURL": "http://healthy-usa.com/healthy-recipes/healthy-23.jpg"			
 		},
 		{
-			"name": "Lucy Suchman",
-			"description": "Loves Trukese navigators",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
-		},
-		{
-			"name": "Vannevar Bush",
-			"description": "Has stellar associative memory",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"			
-		},
-		{
-			"name": "Grace Hopper",
-			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "http://www.personal.psu.edu/djd5202/gHop.jpg"
-		},
-		{
-			"name": "Allen Newell",
-			"description": "Really into psychology",
-			"imageURL": "http://www.nap.edu/html/biomems/photo/anewell.JPG"
+			"name": "Chicken Wrap",
+			"description": "Delicious AND nutritious",
+			"imageURL": "http://bed56888308e93972c04-0dfc23b7b97881dee012a129d9518bae.r34.cf1.rackcdn.com/sites/default/files/imagecache/standard/recipes/MP6866.JPG"			
 		}
+
+	],
+	
+	"myFavs": [
+		{
+			"name": "Fruit Bowl",
+			"description": "Yo I hear you like fruit so heres some fruit in your fruit",
+			"imageURL": "http://healthy-usa.com/healthy-recipes/healthy-23.jpg"			
+		},
+		{
+			"name": "Chicken Wrap",
+			"description": "Delicious AND nutritious",
+			"imageURL": "http://bed56888308e93972c04-0dfc23b7b97881dee012a129d9518bae.r34.cf1.rackcdn.com/sites/default/files/imagecache/standard/recipes/MP6866.JPG"			
+		}
+
 	]
 }

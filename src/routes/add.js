@@ -1,20 +1,26 @@
 var data = require("../data.json");
 
-exports.addFood = function(req, res) { 
+exports.view = function(req, res) {
+	res.render('add');
+}
 
-	// var name = req.query.name;
-	// var des = req.query.description;
+exports.addFood = function(req, res) {
 
-	// var newFriend = 
+	var name = req.query.name;
+	var des = req.query.description;
+	var imageURL = req.query.image;
+	var recipe = req.query.recipe;
+	var tag = req.query.tag;
 
-	// {
-	// 		"name": name,
-	// 		"description": des,
-	// 		"imageURL": "http://lorempixel.com/400/400/people"			
-		
+	var newFood = {
+		"name": name,
+		"description": des,
+		"imageURL": imageURL,
+		"recipe": recipe,
+		"tags": tag			
+	}
 
-	// }
-
-	res.render('add');   
-
- };
+	data["trendingFoods"].push(newFood);
+	console.log(data);
+	res.render('index', data);   
+};

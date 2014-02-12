@@ -50,7 +50,7 @@
 	</nav>
 
 
-	<form id="addFriendForm" role="form" method="get" action="/add">
+	<form id="addFriendForm" role="form" method="get" action="/upload">
 		<h3>Upload</h3>
 		<div class="form-group">
 	      <label for="image">Image URL:</label>
@@ -64,7 +64,15 @@
 	      <label for="description">Description:</label>
 	      <input type="text" class="form-control" id="description" placeholder="Description" name="description">
 	    </div>
-	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the food"></input>
+	    <div class="form-group">
+	    	<label for="recipe">Recipe:</label>
+	    	<input type="text" class="form-control" id="recipe" placeholder="Recipe or URL" name="recipe">
+	    </div>
+	    <div class="form-group">
+	    	<label for="tag">Tags:</label>
+	    	<input type="text" class="form-control" id="tag" placeholder="#example" name="tag">
+	    </div>
+	    <input type="submit" id="submitBtn" class="btn btn-default" value="Upload the food!"></input>
 	</form>
 
 	</div>

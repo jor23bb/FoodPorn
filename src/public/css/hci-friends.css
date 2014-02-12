@@ -16,16 +16,23 @@ h1, h2, h3, h4, h5 {
 .foods{
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+#like {
+	margin-top: 210px;
+	float: left;
+
 }
 
 li{
 	display: inline;
 
 }
-/*h1{
-	float: left;
-}*/
+
 
 .pic {
 	width: 400px;

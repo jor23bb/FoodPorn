@@ -25,7 +25,6 @@
 <body>
 
 	<div class="container">
-
 	<nav class="navbar navbar-default" role="navigation"> <!--navbar-fixed-top-->
 		<div class="container-fluid">
     		<div class="navbar-header">
@@ -41,7 +40,7 @@
       				</form>					
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-     				<li><a href="/add"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-upload"></span> Upload</button></a></li>
+     				<li><a href="/uploadPage"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-upload"></span> Upload</button></a></li>
 					<li><a href="/favs"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span> My Favs</button></a></li>
 					<li><a href="/profile"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> My Profile</button></a></li>
 				</ul>
@@ -53,7 +52,8 @@
 	<div>
 		{{#each trendingFoods}}
 		<div class="foods text-center">
-			<h3><a href="#">{{name}}</a></h3>
+		<button type="button" class="btn btn-default" onclick="#"><span class="glyphicon glyphicon-heart-empty"></span></button>
+			<h3>{{name}}</h3>
 			<img class="pic" src="{{imageURL}}" class="img">
 			<p>{{description}}</p>
 		</div>
@@ -61,5 +61,7 @@
 	</div>
 
 	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
 </body>
 </html>

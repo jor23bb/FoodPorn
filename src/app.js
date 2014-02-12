@@ -39,9 +39,10 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/add', add.addFood);
+app.get('/uploadPage', add.view); // This will load the upload page
 app.get('/favs', favs.view);
 app.get('/profile', profile.view);
+app.get('/upload', add.addFood); // This will actually upload the picture
 // Example route
 // app.get('/users', user.list);
 

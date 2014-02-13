@@ -9,7 +9,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
 
 	$(".foods").click(likeFood);
 }
@@ -26,6 +25,16 @@ function likeFood(e) {
 		"description": foodDesc,
 		"imageURL": foodImg
 	}
+
+	// $('#myModal').modal({
+
+		//apparently we need to use this shit to delete shit from the modal so that it can be reloaded
+		// every time we click on a new img. or something like that
+		
+	$('body').on('hidden', '.modal', function () {
+  $(this).removeData('modal');
+});
+
 
 	// just need to push this to the myFavs data through javascript... but how?
 }

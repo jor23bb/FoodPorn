@@ -69,12 +69,33 @@
 	<div>
 		{{#each trendingFoods}}
 		<div class="foods text-center" id="{{id}}">
-			<a href=""><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty"></span></button>
-				<h3>{{name}}</h3>
-				<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded">
-				<p>{{description}}</p>
-			</a>
+			<a href=""><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty"></span></button>	</a>
+			<h3>{{name}}</h3>
+			<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded hand" data-toggle="modal" data-target="#myModal">
+			<p>{{description}}</p>
+
+
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h2 class="modal-title" id="myModalLabel">{{name}}</h2>
+					</div>
+					<div class="modal-body">
+						<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded">
+						<h3>{{tags}}</h3>
+					</div>
+				
+					<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      				</div>
+      			</div>
+      		</div>
+
 		</div>
+
+
+
 		{{/each}}
 	</div>
 

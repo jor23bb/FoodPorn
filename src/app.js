@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var add = require('./routes/add');
 var favs = require('./routes/favs');
 var profile = require('./routes/profile');
+var search_results = require('./routes/search_results');
 // Example route
 // var user = require('./routes/user');
 
@@ -42,6 +43,7 @@ app.get('/', index.view);
 app.get('/uploadPage', add.view); // This will load the upload page
 app.get('/favs', favs.view);
 app.get('/profile', profile.view);
+app.get('/search_results', search_results.view);
 // Example route
 // app.get('/users', user.list);
 

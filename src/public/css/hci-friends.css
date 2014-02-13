@@ -20,13 +20,9 @@ h1, h2, h3, h4, h5 {
     padding-bottom: 20px;
     padding-left: 300px;
     padding-right: 300px;
-}
-
-#like {
-	margin-top: 210px;
-	float: left;
 
 }
+
 
 li{
 	display: inline;
@@ -34,7 +30,7 @@ li{
 }
 
 
-.pic {
+.img {
 	width: 400px;
 	height: 400px;
 }

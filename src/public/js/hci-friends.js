@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -11,45 +9,23 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	//console.log("Javascript connected!");
+	console.log("Javascript connected!");
 
-	$(".friend a").click(nameClick);
+	$(".foods").click(likeFood);
 }
 
-function nameClick(e) {
-	var name = $(this).text();
-	$(this).text(anagrammedName(name));
-}
+function likeFood(e) {
+	e.preventDefault();
+	var foodID = $(this).closest(".foods").attr("id");
+	var foodName = $(this).find("h3").text();
+	var foodDesc = $(this).find("p").text();
+	var foodImg = $('.img[alt="Food Photos"]').attr('src');
 
-function anagrammedName(name) {
-	// Thanks, Internet Anagram Server!
-	
-	if (name == "Doug Engelbart") {
-		return "Notable Grudge";
-	} 
-	else if (name == "Ivan Sutherland") {
-		return "Vandal Heist Run";
+	var newFavFood = {
+		"name": foodName,
+		"description": foodDesc,
+		"imageURL": foodImg
 	}
-	else if (name == "JCR Licklider") {
-		return "Crick Rid Jell";
-	}
-	else if (name == "Vannevar Bush") {
-		return "Ravens Van Hub";
-	}
-	else if (name == "Alan C. Kay") {
-		return "Canal Yak";
-	}
-	else if (name == "Allen Newell") {
-		return "Ellen All New";
-	}
-	else if (name == "Lucy Suchman") {
-		return "Lunacy Chums";
-	}
-	else if (name == "Grace Hopper") {
-		return "Gear Chopper";
-	}
-	else {
-		console.log(name + " not known for anagramming.");
-		return name;
-	}
+
+	// just need to push this to the myFavs data through javascript... but how?
 }

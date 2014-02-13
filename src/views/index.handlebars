@@ -51,11 +51,12 @@
 
 	<div>
 		{{#each trendingFoods}}
-		<div class="foods text-center">
-		<button type="button" class="btn btn-default" onclick="#"><span class="glyphicon glyphicon-heart-empty"></span></button>
-			<h3>{{name}}</h3>
-			<img class="pic" src="{{imageURL}}" class="img">
-			<p>{{description}}</p>
+		<div class="foods text-center" id="{{id}}">
+			<a href=""><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty"></span></button>
+				<h3>{{name}}</h3>
+				<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded">
+				<p>{{description}}</p>
+			</a>
 		</div>
 		{{/each}}
 	</div>

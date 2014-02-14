@@ -12,7 +12,7 @@
 
 	<link href="../css/search/styles.css" rel="stylesheet"/>
 	<link href="../css/bootstrap.css" rel="stylesheet"/>
-	<link href="../css/hci-friends.css" rel="stylesheet"/>
+	<link href="../css/foodPorn.css" rel="stylesheet"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,12 +24,7 @@
 
 <body>
 
-
-
-
-
 	<div class="container">
-
 
 <!-- 
 	<h2>Ajax Lookup</h2>
@@ -39,8 +34,6 @@
 
         </div>
         <div id="selction-ajax"></div> -->
-
-
 
 	<nav class="navbar navbar-default" role="navigation"> <!--navbar-fixed-top-->
 		<div class="container-fluid">
@@ -73,6 +66,20 @@
 			<h3>{{name}}</h3>
 			<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded hand" data-toggle="modal" data-target="#myModal">
 			<p>{{description}}</p>
+			<div class="comments">
+				{{#each comments}}
+				<p>{{date}} {{username}} said {{comment}}</p>
+				{{/each}}
+			</div>
+			<div class="addComment">
+				<form id="addCommentForm" role="form" method="get" action="/addComments">
+				    <div class="form-group">
+	    				<label for="comment">Comments:</label>
+	    				<input type="text" class="form-control" id="comment" placeholder="add comments" name="comment">
+	    			</div>
+	    			<input type="submit" id="addCommentBtn" class="btn btn-default" value="add comments!"></input>
+				</form>
+			</div>
 
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

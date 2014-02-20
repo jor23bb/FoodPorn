@@ -17,10 +17,9 @@ exports.addFood = function(req, res) {
 		"description": des,
 		"imageURL": imageURL,
 		"recipe": recipe,
-		"tags": tag			
+		"tags": tag		
 	}
 
-	data["trendingFoods"].push(newFood);
-	console.log(data);
-	res.render('index', data);   
+	data["allFoods"].push(newFood);
+	res.render('add');   
 };

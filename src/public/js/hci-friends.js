@@ -9,32 +9,33 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	$("#like").click(function(e) {
+		e.preventDefault;
+		var foodID = $(this).closest('.foods').attr('id');
+		console.log("user clicked on food " + foodID);
+		$.get("/liked/" + foodID, likeFood);
+	});
 
-	$(".foods").click(likeFood);
+	$("#addCommentBtn").click(function(e) {
+		e.preventDefault;
+		var foodID = $(this).closest('.foods').attr('id');
+		var comments = $("#comment").val();
+		$.get("/commented/" + foodID + "&" + comments, commentFood);
+	});
+
 }
 
-function likeFood(e) {
-	e.preventDefault();
-	var foodID = $(this).closest(".foods").attr("id");
-	var foodName = $(this).find("h3").text();
-	var foodDesc = $(this).find("p").text();
-	var foodImg = $('.img[alt="Food Photos"]').attr('src');
+function likeFood(result) {
+	console.log(result);
 
-	var newFavFood = {
-		"name": foodName,
-		"description": foodDesc,
-		"imageURL": foodImg
-	}
+}
 
-	// $('#myModal').modal({
+function commentFood (result) {
+	console.log(result);
+}
 
-		//apparently we need to use this shit to delete shit from the modal so that it can be reloaded
-		// every time we click on a new img. or something like that
-		
-	$('body').on('hidden', '.modal', function () {
-  $(this).removeData('modal');
+//apparently we need to use this shit to delete shit from the modal so that it can be reloaded
+// every time we click on a new img. or something like that
+$('body').on('hidden', '.modal', function () {
+	$(this).removeData('modal');
 });
-
-
-	// just need to push this to the myFavs data through javascript... but how?
-}

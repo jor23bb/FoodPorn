@@ -63,20 +63,20 @@
 	<div>
 		{{#each allFoods}}
 		<div class="foods" id="{{id}}">
-			<a href=""><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty"></span></button></a>
+			<a href="#"><button type="button" class="btn btn-default" id="like"><span class="glyphicon glyphicon-heart-empty"></span></button></a>
 			<h3>{{name}}</h3>
 			<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded hand" data-toggle="modal" data-target="#myModal">
 			<p>{{description}}</p>
 			<div class="comments">
 				<h4>Comments: </h4>
 				{{#each comments}}
-				<p>{{date}} {{username}} said {{comment}}</p>
+				<p>{{username}} said "{{comment}}"</p>
 				{{/each}}
 
 				<div class="addComment">
-					<form id="addCommentForm" role="form" method="get" action="/addComments">
+					<form id="addCommentForm" role="form" method="get">
 					    <div class="form-group">
-	    					<input type="text" class="form-control" id="comment" placeholder="comments" name="comment">
+	    					<input type="text" class="form-control" id="comment" placeholder="add comments" name="comment">
 	    				</div>
 	    				<input type="submit" id="addCommentBtn" class="btn btn-default" value="Add Comment"></input>
 					</form>
@@ -107,9 +107,9 @@
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript" src="../js/search/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="../js/search/jquery.mockjax.js"></script>
+    <!--<script type="text/javascript" src="../js/search/jquery.mockjax.js"></script>-->
     <script type="text/javascript" src="../js/search/jquery.autocomplete.js"></script>
     <script type="text/javascript" src="../js/search/foods.js"></script>
-    <script type="text/javascript" src="../js/search/demo.js"></script>
+    <!--<script type="text/javascript" src="../js/search/demo.js"></script>-->
 </body>
 </html>

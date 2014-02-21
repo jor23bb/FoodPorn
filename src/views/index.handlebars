@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Food Porn</title>	
+	<title>Food Bytes</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
@@ -26,27 +26,25 @@
 
 	<div class="container">
 
-<!-- 
-	<h2>Ajax Lookup</h2>
-        <p>Type country name in english:</p>
-        <div style="position: relative; height: 80px;">
-            <input type="text" class="autocomplete-suggestions" name="country" id="autocomplete" style="position: absolute; z-index: 2; background: transparent;"/>
-
-        </div>
-        <div id="selction-ajax"></div> -->
-
-	<ul class="nav nav-pills">
-  		<li><a href="#"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-home"></span>Home</button></a></li>
-  		<li><a href="/uploadPage"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-upload"></span> Upload</button></a></li>
-	</ul>
+    <div class="navigation">
+    	<div class="centered-pills">
+			<ul class="nav nav-pills">
+				<li><a href="#"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-cutlery"></span> Food Bytes</button></a></li>
+  				<li><a href="#"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span> Home</button></a></li>
+  				<li><a href="/uploadPage"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-upload"></span> Upload</button></a></li>
+			</ul>	
+		</div>
+	</div>
 	<div>
 		{{#each allFoods}}
 		<div class="foods" id="{{id}}">
-			<a href="#"><button type="button" class="btn btn-default" id="like"><span class="glyphicon glyphicon-heart-empty"></span></button></a>
 			<h3>{{name}}</h3>
-			<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded hand" data-toggle="modal" data-target="#myModal">
+			<div class="image_and_like">
+				<a href="#"><button type="button" class="btn btn-default" id="like"><span class="glyphicon glyphicon-heart-empty"></span></button></a>
+				<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded hand" data-toggle="modal" data-target="#myModal">
+			</div>
 			<p>{{description}}</p>
-			<div class="comments">
+			<!--<div class="comments">
 				<h4>Comments: </h4>
 				{{#each comments}}
 				<p>{{username}} said "{{comment}}"</p>
@@ -60,7 +58,7 @@
 	    				<input type="submit" id="addCommentBtn" class="btn btn-default" value="Add Comment"></input>
 					</form>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">

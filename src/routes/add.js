@@ -38,3 +38,12 @@ exports.addComments = function(req, res) {
 	data["allFoods"][foodID - 1]["comments"].push(newComment);
 	res.render('index', data);   
 };
+
+exports.addLikes = function(req, res) {
+	var likes = req.query.likes + 1;
+	var foodID = req.query.id;
+
+
+	data["allFoods"][foodID - 1]["likes"].push(likes);
+	res.render('index', data);   
+};

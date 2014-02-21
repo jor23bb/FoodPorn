@@ -44,21 +44,6 @@
 				<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded hand" data-toggle="modal" data-target="#myModal">
 			</div>
 			<p>{{description}}</p>
-			<!--<div class="comments">
-				<h4>Comments: </h4>
-				{{#each comments}}
-				<p>{{username}} said "{{comment}}"</p>
-				{{/each}}
-
-				<div class="addComment">
-					<form id="addCommentForm" role="form" method="get">
-					    <div class="form-group">
-	    					<input type="text" class="form-control" id="comment" placeholder="add comments" name="comment">
-	    				</div>
-	    				<input type="submit" id="addCommentBtn" class="btn btn-default" value="Add Comment"></input>
-					</form>
-				</div>
-			</div> -->
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
@@ -67,8 +52,25 @@
 						<h2 class="modal-title" id="myModalLabel">{{name}}</h2>
 					</div>
 					<div class="modal-body">
+						<div class="image_and_comments">
 						<img src="{{imageURL}}" alt="Food Photos" class="img img-rounded">
-						<h3>{{tags}}</h3>
+						<div class="comments">
+							<h4>Comments: </h4>
+							{{#each comments}}
+							<p>{{username}} said "{{comment}}"</p>
+							{{/each}}
+
+							<div class="addComment">
+								<form id="addCommentForm" role="form" method="get">
+					    			<div class="form-group">
+	    								<input type="text" class="form-control" id="comment" placeholder="add comments" name="comment">
+	    							</div>
+	    							<input type="submit" id="addCommentBtn" class="btn btn-default" value="Add Comment"></input>
+								</form>
+							</div>
+						</div>
+						</div>
+						<h3>{{tags}} <a href="{{recipe}}">get recipe</a></h3>
 					</div>
 				
 					<div class="modal-footer">

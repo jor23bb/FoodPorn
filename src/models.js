@@ -1,11 +1,9 @@
 
 var Mongoose = require('mongoose');
 
-
 var FoodSchema = new Mongoose.Schema({
 	allFoods: [{
-		username: String,
-		name: String,
+		food_name: String,
 		description: String,
 		imageURL: String,
 		recipe: String,
@@ -14,12 +12,6 @@ var FoodSchema = new Mongoose.Schema({
 		comments: [{
 			username: String,
 			comment: String
-		}]
-	}],
-	Likes: [{
-		username: String,
-		liked: [{
-			id: ObjectId
 		}]
 	}]
 });

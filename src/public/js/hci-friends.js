@@ -23,11 +23,15 @@ function initializePage() {
 		$.get("/commented/" + foodID + "&" + comments, commentFood);
 	});
 
+	$('body').on('hidden', '.modal', function () {
+		$(this).removeData('modal');
+	});
+
 }
 
 function likeFood(result) {
-	console.log(result);
-
+	var foodID = result["id"];
+	$("#" + foodID + " .glyphicon").replaceWith("<span class='glyphicon glyphicon-heart'></span>");
 }
 
 function commentFood (result) {
@@ -36,6 +40,3 @@ function commentFood (result) {
 
 //apparently we need to use this shit to delete shit from the modal so that it can be reloaded
 // every time we click on a new img. or something like that
-$('body').on('hidden', '.modal', function () {
-	$(this).removeData('modal');
-});
